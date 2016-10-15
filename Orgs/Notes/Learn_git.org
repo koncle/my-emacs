@@ -1,0 +1,11 @@
+* Git
+** git config
+  Git 采用自带的 ~git config~ 工具来帮助设置控制 Git 外观和行为的配置变量，它们存在
+
+#+begin_src shell
+  git config --global user.name  "name"  ;; 设置用户名，global变量只能设置一次
+  git config --global user.email "email" ;; 设置用户邮件
+
+  git config --list              ;; 显示git配置信息
+  git config <key>               ;; 显示某一项配
+#+end_src

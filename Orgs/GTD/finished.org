@@ -1,0 +1,8 @@
+* year 2016
+** month 12
+*** week 3 16 12
+**** DONE a test
+- State "DONE"       from "TODO"       [2016-10-15 周六 14:58] \\
+  just for a test!
+开始:<2016-10-15 周六 14:57>
+From:[[file:c:/emacs/.emacs.d/lisp/init-org.el]]

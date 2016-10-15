@@ -1,0 +1,14 @@
+* todo 
+** NEXT 完成 ~emacs~ 的配置 [1/4]                                       :编程:
+- State "NEXT"       from "TODO"       [2016-10-15 周六 13:58] \\
+  git~~
+- State "TODO"       from ""           [2016-10-15 周六 00:33]
+- [X] 完成 ~git~ 安装及使用
+- [ ] 完成 ~gtd~ 个性化配置
+- [ ] 完成 ~c++~ 配置
+- [ ] 完成 ~python~ 配置
+** TODO There is no problem!
+开始:<2016-10-15 周六 15:07>
+  just for a test!
+From:[[file:c:/emacs/.emacs.d/Orgs/GTD/finished.org::just%20for%20a%20test!%0A][a test]]
+

@@ -23,6 +23,10 @@
 ;; 显示列号
 (column-number-mode 1)
 
+;; tab
+(setq tab-width 4)
+
+
 ;; 显示时间
 ;; 详细参数见 ~format-time-string~
 ;; 不能以秒显示时间，因为 ~emacs~ 为了效率，
@@ -43,7 +47,7 @@
       scroll-conservatively 101)
 
 ;; 设置最大行
-(setq default-fill-column 80)
+(setq fill-column 80)
 
 ;; 关闭启动画面
 (setq inhibit-startup-message -1)
@@ -55,22 +59,16 @@
 (setq make-backup-files nil)
 
 ;; 设置字符集
-(set-language-environment 'Chinese-GB)
-(set-keyboard-coding-system 'euc-cn)
-(set-clipboard-coding-system 'euc-cn)
-(set-terminal-coding-system 'euc-cn)
-(set-buffer-file-coding-system 'euc-cn)
-(set-selection-coding-system 'euc-cn)
-(modify-coding-system-alist 'process "*" 'euc-cn)
-(setq default-process-coding-system 
-            '(euc-cn . euc-cn))
-(setq-default pathname-coding-system 'euc-cn)
+(prefer-coding-system 'gbk)
 
 ;; 防止 ~shell~ 出现乱码
 (ansi-color-for-comint-mode-on)
 
 ;; 高亮当前行
 (global-hl-line-mode 1)
+
+;; 全屏~
+(toggle-frame-fullscreen)
 
 ;; F2打开初始文件
 (defun open-init-file()

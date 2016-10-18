@@ -1,8 +1,21 @@
+;;  初始化包
 (when (>= emacs-major-version 24)
   (require 'package)
   (package-initialize)
-  (add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/") 1)
-  (add-to-list 'package-archives '("elpa" . "http://tromey.com/elpa/") 1)
-  (add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/") 1))
+  (setq package-archives
+	       '(("gnu" . "http://elpa.gnu.org/packages/")
+		 ("popkit" . "http://elpa.popkit.org/packages/")
+		 ("melpa" . "http://melpa.org/packages/"))))
 
+;;(defvar my-packages
+;;  '(elpy
+;;    flycheck
+;;    color-theme
+;;    py-autopep8
+;;    ))
+
+;;(dolist (p my-packages)
+;;  (when (not (package-installed-p p))
+;;  (package-install p)))
+	 
 (provide 'init-package)

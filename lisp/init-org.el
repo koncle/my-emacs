@@ -8,10 +8,13 @@
 (global-set-key (kbd "C-c l") 'org-store-link)
 (global-set-key (kbd "C-c C-l") 'org-insert-link)
 
-;; remember 模板定义
+;; agenda文件列表
 (setq org-agenda-files
-      '("~/.emacs.d/Orgs/GTD/tasks.org"
-	"~/.emacs.d/Orgs/GTD/inbox.org"
+      '("~/GTD/tasks.org"
+	"~/GTD/inbox.org"
+	"~/GTD/finished.org"
+	"~/GTD/trash.org"
+	"~/GTD/projects.org"
 	))
 
 ;; 转接命令
@@ -36,27 +39,37 @@
 (setq org-todo-keywords
       '((sequence "TODO(t!)" "NEXT(n@/!)" "Waiting(w@/!)"
 		  "|" "ABORT(a@/!)" "DONE(d@/!)" )))
+
 ;; 标签设置
 (setq org-tag-alist '(("作业" . ?t)
-		      ("项目" . ?x)
+		      ("项目" . ?P)
 		      ("编程" . ?p)
 		      ("电影" . ?c)
 		      ("读书" . ?r)
-		      ("运动" . ?e)))
+		      ("运动" . ?E)
+		      ("笔记" . ?n)
+		      ("Emacs" . ?e)
+		      ("Java" . ?J)
+		      ("Cpp" . ?c)
+		      ("Python" . ?y)
+		      ("Elisp" . ?l)
+		      ("JavaScript" . ?j)
+		      ("Html" . ?h)
+		      ))
+      
 
 ;; org-capture
 (global-set-key (kbd "C-c c") 'org-capture)
 
 (setq org-default-notes-file
-      '("~/.emacs.d/Orgs/GTD/tasks.org"
-	"~/.emacs.d/Orgs/GTD/inbox.org"
+      '("~/GTD/tasks.org"
+	"~/GTD/inbox.org"
 	))
 
 (setq org-capture-templates
-      '(("t" "Tasks" entry (file+headline "~/.emacs.d/Orgs/GTD/tasks.org" "todo")
-	 "** TODO %?\n开始:%T\nRef:%i\nDesciption:\nFrom:%a\n")
-	("i" "Inbox" entry (file+headline "~/.emacs.d/Orgs/GTD/inbox.org" "Inbox")
-	 "** %?\n创建:%T\nRef:%i\nDiscription:\nFrom:%a\n")))
+      '(("t" "Tasks" entry (file+headline "~/GTD/tasks.org" "todo")
+	 "\n** TODO %?\n开始:%T\nRef:%i\nDesciption:\nFrom:%a\n")
+	("i" "Inbox" entry (file+headline "~/GTD/inbox.org" "Inbox")
+	 "\n** %?\n创建:%T\nRef:%i\nDiscription:\nFrom:%a\n")))
 
 (provide 'init-org)
-

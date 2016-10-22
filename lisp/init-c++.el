@@ -22,7 +22,6 @@
 				(file-name-sans-extension file)
 				" " file))))))
 
-
 ;; (file-exists-p "Makefile")
 ;;(add-hook 'c-mode-hook 'kbd-quick-c)
 

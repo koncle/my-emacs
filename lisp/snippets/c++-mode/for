@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: for_c++
+# key: for
+# --
+for(${int i = 0};${};${++i}) {${}
+}

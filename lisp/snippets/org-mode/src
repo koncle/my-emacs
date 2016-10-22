@@ -1,0 +1,7 @@
+# -*- coding:utf-8 -*-
+# name: begin_src
+# key: #+begin
+# --
+#+begin_src ${}
+  ${}
+#+end_src

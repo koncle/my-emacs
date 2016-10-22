@@ -23,17 +23,13 @@
 ;; 显示列号
 (column-number-mode 1)
 
-;; tab
-(setq tab-width 4)
-
-
 ;; 显示时间
 ;; 详细参数见 ~format-time-string~
 ;; 不能以秒显示时间，因为 ~emacs~ 为了效率，
 ;; 不会反复计算每个窗口的 mode line 和 header line,
 ;; 只有在某些情况出现时才刷新它，比如说改变窗口配置，
 ;; 切换 buffer, 改变 buffer 大小等
-(display-time-mode 1)
+(display-time-mode t)
 (setq display-time-format (format-time-string "%m/%d %a %H:%M"))
 
 ;; 设置屏幕滚动边界
@@ -75,5 +71,12 @@
   (interactive)
   (find-file "~/.emacs.d/init.el"))
 (global-set-key (kbd "<f1>") 'open-init-file)
+
+(setq window-numbering-mode t)
+
+
+(setq-default c-basic-offset 4
+	      tab-width 4
+	      indent-tabs-mode t)
 
 (provide 'init-frame)

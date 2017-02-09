@@ -4,7 +4,6 @@
 ;; 代码块语法高亮
 (setq org-src-fontify-natively t)
 
-
 ;; 绑定日历
 (global-set-key (kbd "C-c a") 'org-agenda)
 
@@ -50,6 +49,7 @@
 		      ("读书" . ?r)
 		      ("运动" . ?E)
 		      ("笔记" . ?n)
+			  ("感受" . ?f)
 		      ("Emacs" . ?e)
 		      ("Java" . ?J)
 		      ("Cpp" . ?C)
@@ -71,8 +71,14 @@
       '(("n" "Notes" entry (file+headline "~/GTD/tasks.org" "Notes")
 		 "\n** TODO %?\n开始:%T\nRef:%i\nDesciption:\nSrc:%a\n")
 		("t" "Tasks" entry (file+headline "~/GTD/tasks.org" "Todo")
-		 "\n** TODO %?\n开始:%T\nDesciption:\nFrom:%a\n")
+		 "\n** TODO %?\n开始:%T\nDesciption:\n")
 		("i" "Inbox" entry (file+headline "~/GTD/tasks.org" "Inbox")
 		 "\n** %?\n创建:%T\nRef:%i\nDiscription:\nFrom:%a\n")))
+(setq org-publish-project-alist
+	  '(("org"
+	   :base-directory "~/Exprot/HTML/"
+	   :base-extension "HTML"
+	   :style "<link rel=\"stylesheets\" href=\"org.css\" type=\"text/css\">")))
+(org-agenda-to-appt)
 
 (provide 'init-org)

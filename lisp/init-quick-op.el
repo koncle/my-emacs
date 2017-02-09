@@ -27,4 +27,8 @@
 
 (yas-global-mode 1)
 
+;; ido快速查找文件
+(ido-mode)
+
+
 (provide 'init-quick-op)

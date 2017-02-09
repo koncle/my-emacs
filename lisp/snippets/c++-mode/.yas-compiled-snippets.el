@@ -2,7 +2,8 @@
 ;;; Snippet definitions:
 ;;;
 (yas-define-snippets 'c++-mode
-					 '(("for" "for(${int i = 0};${};${++i}) {${}\n}" "for_c++" nil nil nil "c:/emacs/.emacs.d/lisp/snippets/c++-mode/for" nil nil)))
+					 '(("while" "while(${}){${}}" "while" nil nil nil "c:/emacs/.emacs.d/lisp/snippets/c++-mode/while" nil nil)
+					   ("for" "for(${int i = 0};${};${++i}) {${}\n}" "for_c++" nil nil nil "c:/emacs/.emacs.d/lisp/snippets/c++-mode/for" nil nil)))
 
 
-;;; Do not edit! File generated at Sat Oct 22 11:22:34 2016
+;;; Do not edit! File generated at Thu Feb  9 13:43:58 2017

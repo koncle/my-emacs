@@ -29,8 +29,9 @@
 ;; 不会反复计算每个窗口的 mode line 和 header line,
 ;; 只有在某些情况出现时才刷新它，比如说改变窗口配置，
 ;; 切换 buffer, 改变 buffer 大小等
-(display-time-mode t)
-(setq display-time-format (format-time-string "%m/%d %a %H:%M"))
+(setq display-time-format "%m/%d %a %H:%M:%S")
+(setq display-time-interval 1)
+(display-time-mode 1)
 
 ;; 设置屏幕滚动边界
 ;; 1.设置滚屏步数
@@ -53,9 +54,11 @@
 
 ;; 不生成备份文件
 (setq make-backup-files nil)
+;; (setq auto-save-default t)
 
 ;; 设置字符集
 (prefer-coding-system 'gbk)
+
 
 ;; 防止 ~shell~ 出现乱码
 (ansi-color-for-comint-mode-on)
@@ -78,5 +81,7 @@
 (setq-default c-basic-offset 4
 	      tab-width 4
 	      indent-tabs-mode t)
+
+
 
 (provide 'init-frame)

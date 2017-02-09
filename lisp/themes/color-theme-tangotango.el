@@ -1,38 +1,3 @@
-;;; color-theme-tangotango.el --- Tango Palette color theme for Emacs.
-
-;; First derived from color-theme-tango.el,  created by danranx@gmail.com :
-;; http://www.emacswiki.org/emacs/color-theme-tango.el
-
-;; Copyright (C) 2011, 2012, 2013, Julien Barnier <julien@nozav.org>
-
-;; Author: Julien Barnier
-;; Adapted-By: Yesudeep Mangalapilly
-;; Keywords: tango palette color theme emacs
-;; URL: https://github.com/juba/color-theme-tangotango
-;; Version: 0.0.6
-;; Package-Requires: ((color-theme "6.6.1"))
-
-;; This file is NOT part of GNU Emacs.
-
-;;; License:
-
-;; This is free software; you can redistribute it and/or modify it under
-;; the terms of the GNU General Public License as published by the Free
-;; Software Foundation; either version 2, or (at your option) any later
-;; version.
-;;
-;; This is distributed in the hope that it will be useful, but WITHOUT
-;; ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or
-;; FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License
-;; for more details.
-;;
-;; You should have received a copy of the GNU General Public License
-;; along with GNU Emacs; see the file COPYING.  If not, write to the
-;; Free Software Foundation, Inc., 59 Temple Place - Suite 330, Boston,
-;; MA 02111-1307, USA.
-
-;;; Code:
-
 ;; color theme (requires http://www.emacswiki.org/cgi-bin/wiki?ColorTheme )
 (eval-when-compile
   (require 'color-theme))
@@ -164,10 +129,16 @@
      (message-header-to ((t (:foreground "white"))))
      (message-header-cc ((t (:foreground "white"))))
      (org-hide ((t (:foreground "#2e3436"))))
-     (org-level-1 ((t (:bold t :foreground "dodger blue" :height 1.5))))
+     (org-level-1 ((t (:bold t :foreground "dodger blue" :height 1.3))))
      (org-level-2 ((t (:bold nil :foreground "#edd400" :height 1.2))))
      (org-level-3 ((t (:bold t :foreground "#6ac214" :height 1.0))))
      (org-level-4 ((t (:bold nil :foreground "tomato" :height 1.0))))
+	 
+	 (org-level-5 ((t (:foreground "#F28B86"))))
+	 (org-level-6 ((t (:foreground "#86B187"))))
+	 (org-level-7 ((t (:foreground "#AC8952"))))
+	 (org-level-8 ((t (:foreground "#65A399"))))
+
      (org-date ((t (:underline t :foreground "magenta3"))))
      (org-footnote  ((t (:underline t :foreground "magenta3"))))
      (org-link ((t (:foreground "skyblue2" :background "#2e3436"))))

@@ -1,1 +1,5 @@
+(add-to-list 'load-path " ~/.emacs.d/lisp/snippets")
+(require 'yasnippet-bundle)
+(setq yas/root-directory "~/.emacs.d/lisp/snippets") 
+(yas/load-directory yas/root-directory)
 (provide 'init-yasnippet)

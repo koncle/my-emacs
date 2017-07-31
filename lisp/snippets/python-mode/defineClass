@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: defineClass
+# key: cla
+# --
+class ${}(${}):
+    def __init__(${self}):
+	    ${pass}

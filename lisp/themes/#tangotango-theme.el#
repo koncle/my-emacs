@@ -168,7 +168,7 @@
  `(org-footnote  ((t (:underline t :foreground "magenta3"))))
  `(org-link ((t (:foreground "skyblue2" :background "#2e3436" :underline nil))))
  `(org-special-keyword ((t (:foreground "brown"))))
-;; `(org-verbatim ((t (:foreground "#eeeeec" :underline t :slant italic))))
+ `(org-verbatim ((t (:foreground "#eeeeec" :underline nil :slant italic))))
  `(org-block ((t (:foreground "#bbbbbc"))))
  `(org-quote ((t (:inherit org-block :slant italic))))
  `(org-verse ((t (:inherit org-block :slant italic))))

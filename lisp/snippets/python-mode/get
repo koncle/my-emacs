@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: get
+# key: getter
+# --
+def get${1:Attribute}(self):
+	return self.${2:attr}

@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: set
+# key: setter
+# --
+def set${1:Attribute}(self, ${2:args}):
+	self.$2 = $2

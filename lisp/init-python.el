@@ -1,13 +1,17 @@
-(elpy-enable)
+(use-package elpy-mode
+  :defer t
+  :init
+  (add-hook 'python-mode-hook 'elpy-mode)
+  :config
+  (elpy-enable)
+  (elpy-use-ipython)
+  (setq python-indent-offset 4)
+  )
 
-(require 'py-autopep8)
-(add-hook 'elpy-mode-hook 'py-autopep8-enable-on-save)
-(elpy-use-ipython)
+(use-package py-autopep8
+  :defer t
+  :init
+  (add-hook 'elpy-mode-hook 'py-autopep8-enable-on-save)
+  )
 
-(setq python-indent-offset 4)
-
-(defun find-py-file()
-  (interactive)
-  (find-file "D:/python程序"))
-   
 (provide 'init-python)

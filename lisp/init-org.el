@@ -1,15 +1,9 @@
+(setq org-startup-with-inline-images t)
 ;; 全 ~org~ 文本缩进
 (setq org-startup-indented t)
 
 ;; 代码块语法高亮
 (setq org-src-fontify-natively t)
-
-;; 绑定日历
-(global-set-key (kbd "C-c a") 'org-agenda)
-
-;; 储存和插入链接
-(global-set-key (kbd "C-c l") 'org-store-link)
-(global-set-key (kbd "C-c C-l") 'org-insert-link)
 
 ;; agenda文件列表
 (setq org-agenda-files
@@ -18,9 +12,6 @@
 	"~/GTD/trash.org"
 	"~/GTD/projects.org"
 	))
-
-;; 转接命令
-(global-set-key (kbd "C-c C-w") 'org-refile)
 
 ;; 转接标题级别
 ;; ("a.org" . (:level . 2))
@@ -32,6 +23,7 @@
 	("tasks.org" . (:level . 2))
 	("trash.org" . (:level . 1))
 	("projects.org" . (:level . 2))
+	("books.org" . (:level . 2))
 	))
 
 ;; 状态设置
@@ -50,6 +42,8 @@
 		      ("运动" . ?E)
 		      ("笔记" . ?n)
 			  ("感受" . ?f)
+              ("考研" . ?k)
+              ("生活" . ?s)
 		      ("Emacs" . ?e)
 		      ("Java" . ?J)
 		      ("Cpp" . ?C)
@@ -58,10 +52,6 @@
 		      ("JavaScript" . ?j)
 		      ("Html" . ?h)
 		      ))
-      
-
-;; org-capture
-(global-set-key (kbd "C-c c") 'org-capture)
 
 (setq org-default-notes-file
       '("~/GTD/tasks.org"
@@ -73,12 +63,17 @@
 		("t" "Tasks" entry (file+headline "~/GTD/tasks.org" "Todo")
 		 "\n** TODO %?\n开始:%T\nDesciption:\n")
 		("i" "Inbox" entry (file+headline "~/GTD/tasks.org" "Inbox")
-		 "\n** %?\n创建:%T\nRef:%i\nDiscription:\nFrom:%a\n")))
+		 "\n** %?\n创建:%T\nRef:%i\nDiscription:\nFrom:%a\n")
+		("l" "Long Time Task" entry (file+headline "~/GTD/tasks.org" "Long")
+		 "\n** %?\n创建:%T\nRef:%i\nDiscription:\nFrom:%a\n")
+		))
+
 (setq org-publish-project-alist
 	  '(("org"
 	   :base-directory "~/Exprot/HTML/"
 	   :base-extension "HTML"
 	   :style "<link rel=\"stylesheets\" href=\"org.css\" type=\"text/css\">")))
+
 (org-agenda-to-appt)
 
 (provide 'init-org)

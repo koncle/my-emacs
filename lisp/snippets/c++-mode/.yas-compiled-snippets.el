@@ -6,4 +6,4 @@
 					   ("for" "for(${int i = 0};${};${++i}) {${}\n}" "for_c++" nil nil nil "c:/emacs/.emacs.d/lisp/snippets/c++-mode/for" nil nil)))
 
 
-;;; Do not edit! File generated at Thu Feb  9 13:43:58 2017
+;;; Do not edit! File generated at Thu Feb 16 21:51:23 2017
